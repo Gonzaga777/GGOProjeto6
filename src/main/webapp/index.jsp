@@ -56,8 +56,54 @@
 
 <!-- Fim do exemplo Bootstrap -->
 <!-- Exemplo de JSTL = C:URL  -->
+<p>Link do Meu Git e Uso do C:URL </p>
  <a href = "<c:url value = "https://github.com/Gonzaga777/GGOProjeto6"/>"style="border">GIT</a>
-
-	
+<!-- Exemplo de JSTL = C:URL  -->
+<!-- Exemplo de JSTL = C:CHOOSE  -->
+<c:set var = "idade" scope = "session" value = "${20}"/>
+      <p>Sua idade eh : <c:out value = "${idade}"/></p>
+      <c:choose>
+         
+         <c:when test = "${idade <= 18}">
+           Você é um Jovem.
+         </c:when>
+         
+         <c:when test = "${idade > 18}">
+            Você é um Adulto
+         </c:when>
+         <c:when test = "${idade > 45}">
+            Você está em uma Idade Avançada.
+         </c:when>
+         
+         <c:otherwise>
+            Você ja viveu bastante.
+         </c:otherwise>
+      </c:choose>
+      <!-- Fim do Exemplo de JSTL = C:CHOOSE  -->
+      <br>
+      
+   <!--Exemplo de JSTL = C:IF  -->   
+   <c:set var = "dividas" scope = "session" value = "${3000}"/>
+      <c:if test = "${dividas < 2000}">
+         <p>Sua Divida esta sobre controle<c:out value = "${dividas}"/><p>
+      </c:if>
+      <c:if test = "${dividas > 2000}">
+         <p>Seu Nome Vai Pro SPC e Serasa , voce deve :<c:out value = "${dividas}"/><p>
+      </c:if>
+      <!-- FIM DO Exemplo de JSTL = C:IF  --> 
+      <br>
+      
+    <!--Exemplo de JSTL = C:OUT  --> 
+      <c:out value = "${'Uso do C:OUT'}"/>
+      <!--Fim do Exemplo de JSTL = C:OUT  --> 
+      <br>
+      
+      <!--Exemplo de JSTL = C:SET  -->
+      <p>Mostrando o ANO Vigente com C:SET</p>
+      <c:set var = "DataHoje" scope = "session" value = "${2022}"/>
+      <c:out value = "${DataHoje}"/>
+      <!-- Fim do Exemplo de JSTL = C:SET  -->
+      <br>
+      
 </body>
 </html>
