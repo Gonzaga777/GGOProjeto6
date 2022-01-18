@@ -2,7 +2,8 @@
     pageEncoding="ISO-8859-1"%>
  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-    
+ <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<!-- Exemplo da Aula -->
 <%!
 	String today(){
 		java.text.SimpleDateFormat dt = new java.text.SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
@@ -35,6 +36,27 @@
 									<:out value="${d1}"/>
 								</c:otherwise>
 						</c:choose>	</h1>
+<!-- Fim Exemplo da Aula -->
+<!-- Exemplo de Bootstrap -->
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Senha</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+
+<!-- Fim do exemplo Bootstrap -->
+<!-- Exemplo de JSTL = C:URL  -->
+ <a href = "<c:url value = "https://github.com/Gonzaga777/GGOProjeto6"/>"style="border">GIT</a>
 
 	
 </body>
